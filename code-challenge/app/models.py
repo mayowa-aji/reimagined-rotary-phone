@@ -4,16 +4,16 @@ from flask_serialize import SerializerMixin
 db = SQLAlchemy()
 
 class Restaurant(db.Model, SerializerMixin):
-    __tablename__ = 'restaurant'
+    __tablename__ = 'restaurants'
 
     id = db.Column(db.Integer, primary_key=True)
 
 class Pizza(db.Model, SerializerMixin):
-    __tablename__ = 'pizza'
+    __tablename__ = 'pizzas'
 
     id = db.Column(db.Integer, primary_key=True)
 
 class RestaurantPizza(db.Model, SerializerMixin):
-    __tablename__ = 'restaurant_pizza'
+    __tablename__ = 'restaurant_pizzas'
 
     id = db.Column(db.Integer, primary_key=True)
