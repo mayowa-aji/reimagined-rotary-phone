@@ -3,7 +3,7 @@
 from flask import Flask, make_response
 from flask_migrate import Migrate
 
-from models import db, Restaurant
+from models import db, Restaurant, Pizza, RestaurantPizza
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
@@ -13,8 +13,25 @@ migrate = Migrate(app, db)
 
 db.init_app(app)
 
+
 @app.route('/')
 def home():
+    return ''
+
+@app.route('/restaurants')
+def restaurants():
+    return ''
+
+@app.route('/restaurants/<int:id>')
+def restaurant_by_id(id):
+    return ''
+
+@app.route('/pizzas')
+def pizzas():
+    return ''
+
+@app.route('/restaurant_pizzas')
+def resaurant_pizzas():
     return ''
 
 

@@ -1,10 +1,19 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_serialize import SerializerMixin
 
 db = SQLAlchemy()
 
-class Restaurant(db.Model):
-    __tablename__ = 'Restaurant'
+class Restaurant(db.Model, SerializerMixin):
+    __tablename__ = 'restaurant'
 
     id = db.Column(db.Integer, primary_key=True)
 
-# add any models you may need.
+class Pizza(db.Model, SerializerMixin):
+    __tablename__ = 'pizza'
+
+    id = db.Column(db.Integer, primary_key=True)
+
+class RestaurantPizza(db.Model, SerializerMixin):
+    __tablename__ = 'restaurant_pizza'
+
+    id = db.Column(db.Integer, primary_key=True)
