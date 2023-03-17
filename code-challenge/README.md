@@ -37,11 +37,8 @@ You are not being assessed on React, and you don't have to update any of the Rea
 code; the frontend code is available just so that you can test out the behavior
 of your API in a realistic setting.
 
-There are also tests included which you can run using `pytest -x` to check your work.
-
 Depending on your preference, you can either check your progress by:
 
-- Running `pytest -x` and seeing if your code passes the tests
 - Running the React application in the browser and interacting with the API via
   the frontend
 - Running the Flask server and using Postman to make requests
